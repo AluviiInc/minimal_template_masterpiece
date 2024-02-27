@@ -56,7 +56,7 @@ import { AuthProvider } from './auth/JwtContext';
 // import { AuthProvider } from './auth/AwsCognitoContext';
 
 // ----------------------------------------------------------------------
-// Sam was here
+
 export default function App() {
   return (
     <AuthProvider>
