@@ -34,6 +34,13 @@ const ICONS = {
   analytics: icon('ic_analytics'),
   dashboard: icon('ic_dashboard'),
   house: icon('ic_house'),
+  gear: icon('ic_gear'),
+  orders: icon('ic_orders'),
+  customers: icon('ic_customers'),
+  catalog: icon('ic_catalog'),
+  team: icon('ic_team'),
+  apps: icon('ic_apps'),
+  reports: icon('ic_reports'),
 };
 
 const navConfig = [
@@ -42,181 +49,123 @@ const navConfig = [
   {
     subheader: 'management',
     items: [
-      // USER
+      // DASHBOARD
       {
         title: 'dashboard',
         path: PATH_DASHBOARD.user.root,
         icon: ICONS.house,
         children: [
-          { title: 'profile', path: PATH_DASHBOARD.user.profile },
-          { title: 'cards', path: PATH_DASHBOARD.user.cards },
-          { title: 'list', path: PATH_DASHBOARD.user.list },
-          { title: 'create', path: PATH_DASHBOARD.user.new },
-          { title: 'edit', path: PATH_DASHBOARD.user.demoEdit },
-          { title: 'account', path: PATH_DASHBOARD.user.account },
+          { title: 'dashboard', path: PATH_DASHBOARD.user.profile },
+          { title: 'check-in', path: PATH_DASHBOARD.user.cards },
         ],
       },
 
-      // E-COMMERCE
+      // ORDERS
       {
-        title: 'ecommerce',
+        title: 'orders',
         path: PATH_DASHBOARD.eCommerce.root,
-        icon: ICONS.cart,
+        icon: ICONS.orders,
         children: [
-          { title: 'shop', path: PATH_DASHBOARD.eCommerce.shop },
-          { title: 'product', path: PATH_DASHBOARD.eCommerce.demoView },
-          { title: 'list', path: PATH_DASHBOARD.eCommerce.list },
-          { title: 'create', path: PATH_DASHBOARD.eCommerce.new },
-          { title: 'edit', path: PATH_DASHBOARD.eCommerce.demoEdit },
-          { title: 'checkout', path: PATH_DASHBOARD.eCommerce.checkout },
+          { title: 'orders', path: PATH_DASHBOARD.eCommerce.shop },
+          { title: 'tickets', path: PATH_DASHBOARD.eCommerce.demoView },
+          { title: 'memberships', path: PATH_DASHBOARD.eCommerce.list },
+          { title: 'bookings', path: PATH_DASHBOARD.eCommerce.new },
+          { title: 'gift cards', path: PATH_DASHBOARD.eCommerce.demoEdit },
+          { title: 'rentals', path: PATH_DASHBOARD.eCommerce.checkout },
+          { title: 'game cards', path: PATH_DASHBOARD.eCommerce.checkout },
         ],
       },
 
-      // INVOICE
+      // CUSTOMERS
       {
-        title: 'invoice',
+        title: 'customers',
         path: PATH_DASHBOARD.invoice.root,
-        icon: ICONS.invoice,
+        icon: ICONS.customers,
         children: [
-          { title: 'list', path: PATH_DASHBOARD.invoice.list },
-          { title: 'details', path: PATH_DASHBOARD.invoice.demoView },
-          { title: 'create', path: PATH_DASHBOARD.invoice.new },
-          { title: 'edit', path: PATH_DASHBOARD.invoice.demoEdit },
+          { title: 'customer list', path: PATH_DASHBOARD.invoice.list },
+          
         ],
       },
 
-      // BLOG
+      // CATALOG
       {
-        title: 'blog',
+        title: 'catalog',
         path: PATH_DASHBOARD.blog.root,
-        icon: ICONS.blog,
+        icon: ICONS.catalog,
         children: [
-          { title: 'posts', path: PATH_DASHBOARD.blog.posts },
-          { title: 'post', path: PATH_DASHBOARD.blog.demoView },
-          { title: 'create', path: PATH_DASHBOARD.blog.new },
+          { title: 'items', path: PATH_DASHBOARD.blog.posts },
+          { title: 'categories', path: PATH_DASHBOARD.blog.demoView },
+          { title: 'modifiers', path: PATH_DASHBOARD.blog.new },
+          { title: 'inventory', path: PATH_DASHBOARD.blog.new },
+          { title: 'discounts', path: PATH_DASHBOARD.blog.new },
+          { title: 'schedules', path: PATH_DASHBOARD.blog.new },
+          { title: 'assets', path: PATH_DASHBOARD.blog.new },
+          { title: 'register setup', path: PATH_DASHBOARD.blog.new },
         ],
       },
-      {
-        title: 'File manager',
-        path: PATH_DASHBOARD.fileManager,
-        icon: ICONS.folder,
-      },
-    ],
-  },
 
-  // APP
-  // ----------------------------------------------------------------------
-  {
-    subheader: 'app',
-    items: [
+      // TEAM
       {
-        title: 'mail',
-        path: PATH_DASHBOARD.mail.root,
-        icon: ICONS.mail,
-        info: <Label color="error">+32</Label>,
-      },
-      {
-        title: 'chat',
-        path: PATH_DASHBOARD.chat.root,
-        icon: ICONS.chat,
-      },
-      {
-        title: 'calendar',
-        path: PATH_DASHBOARD.calendar,
-        icon: ICONS.calendar,
-      },
-      {
-        title: 'kanban',
-        path: PATH_DASHBOARD.kanban,
-        icon: ICONS.kanban,
-      },
-    ],
-  },
-
-  // DEMO MENU STATES
-  {
-    subheader: 'Other cases',
-    items: [
-      {
-        // default roles : All roles can see this entry.
-        // roles: ['user'] Only users can see this item.
-        // roles: ['admin'] Only admin can see this item.
-        // roles: ['admin', 'manager'] Only admin/manager can see this item.
-        // Reference from 'src/guards/RoleBasedGuard'.
-        title: 'item_by_roles',
-        path: PATH_DASHBOARD.permissionDenied,
-        icon: ICONS.lock,
-        roles: ['admin'],
-        caption: 'only_admin_can_see_this_item',
-      },
-      {
-        title: 'menu_level',
-        path: '#/dashboard/menu_level',
-        icon: ICONS.menuItem,
+        title: 'team',
+        path: PATH_DASHBOARD.invoice.root,
+        icon: ICONS.team,
         children: [
-          {
-            title: 'menu_level_2a',
-            path: '#/dashboard/menu_level/menu_level_2a',
-          },
-          {
-            title: 'menu_level_2b',
-            path: '#/dashboard/menu_level/menu_level_2b',
-            children: [
-              {
-                title: 'menu_level_3a',
-                path: '#/dashboard/menu_level/menu_level_2b/menu_level_3a',
-              },
-              {
-                title: 'menu_level_3b',
-                path: '#/dashboard/menu_level/menu_level_2b/menu_level_3b',
-                children: [
-                  {
-                    title: 'menu_level_4a',
-                    path: '#/dashboard/menu_level/menu_level_2b/menu_level_3b/menu_level_4a',
-                  },
-                  {
-                    title: 'menu_level_4b',
-                    path: '#/dashboard/menu_level/menu_level_2b/menu_level_3b/menu_level_4b',
-                  },
-                ],
-              },
-            ],
-          },
+          { title: 'users', path: PATH_DASHBOARD.invoice.list },
+          { title: 'roles', path: PATH_DASHBOARD.invoice.demoView },
+          { title: 'time cards', path: PATH_DASHBOARD.invoice.new },
+          { title: 'tills', path: PATH_DASHBOARD.invoice.demoEdit },
         ],
       },
+
+      // APPS
       {
-        title: 'item_disabled',
-        path: '#disabled',
-        icon: ICONS.disabled,
-        disabled: true,
+        title: 'apps',
+        path: PATH_DASHBOARD.invoice.root,
+        icon: ICONS.apps,
+        children: [
+          { title: 'pos registers', path: PATH_DASHBOARD.invoice.list },
+          { title: 'clock in / out', path: PATH_DASHBOARD.invoice.demoView },
+          { title: 'kitchen display', path: PATH_DASHBOARD.invoice.new },
+          { title: 'ecommerce', path: PATH_DASHBOARD.invoice.demoEdit },
+          { title: 'access control', path: PATH_DASHBOARD.invoice.demoEdit },
+          { title: 'self-service kiosk', path: PATH_DASHBOARD.invoice.demoEdit },
+          { title: 'arcade redemption', path: PATH_DASHBOARD.invoice.demoEdit },
+        ],
       },
 
+      // REPORTS
       {
-        title: 'item_label',
-        path: '#label',
-        icon: ICONS.label,
-        info: (
-          <Label color="info" startIcon={<Iconify icon="eva:email-fill" />}>
-            NEW
-          </Label>
-        ),
+        title: 'reports',
+        path: PATH_DASHBOARD.invoice.root,
+        icon: ICONS.reports,
+        children: [
+          { title: 'reports', path: PATH_DASHBOARD.invoice.list },
+          
+        ],
       },
+
+      // ADMIN
       {
-        title: 'item_caption',
-        path: '#caption',
-        icon: ICONS.menuItem,
-        caption:
-          'Quisque malesuada placerat nisl. In hac habitasse platea dictumst. Cras id dui. Pellentesque commodo eros a enim. Morbi mollis tellus ac sapien.',
-      },
-      {
-        title: 'item_external_link',
-        path: 'https://www.google.com/',
-        icon: ICONS.external,
-      },
-      {
-        title: 'blank',
-        path: PATH_DASHBOARD.blank,
-        icon: ICONS.blank,
+        title: 'admin',
+        path: PATH_DASHBOARD.invoice.root,
+        icon: ICONS.gear,
+        children: [
+          { title: 'calendars', path: PATH_DASHBOARD.invoice.list },
+          { title: 'sales tax', path: PATH_DASHBOARD.invoice.demoView },
+          { title: 'accounting codes', path: PATH_DASHBOARD.invoice.new },
+          { title: 'waiver forms', path: PATH_DASHBOARD.invoice.demoEdit },
+          { title: 'receipt templates', path: PATH_DASHBOARD.invoice.list },
+          { title: 'organizational units', path: PATH_DASHBOARD.invoice.demoView },
+          { title: 'currencies', path: PATH_DASHBOARD.invoice.new },
+          { title: 'hardware', path: PATH_DASHBOARD.invoice.demoEdit },
+          { title: 'configuration', path: PATH_DASHBOARD.invoice.list },
+          { title: 'integrations', path: PATH_DASHBOARD.invoice.demoView },
+          { title: 'games', path: PATH_DASHBOARD.invoice.new },
+          { title: 'ticket templates', path: PATH_DASHBOARD.invoice.demoEdit },
+          { title: 'ticket types', path: PATH_DASHBOARD.invoice.list },
+          { title: 'entitlements', path: PATH_DASHBOARD.invoice.demoView },
+          { title: 'system configuration', path: PATH_DASHBOARD.invoice.new },
+        ],
       },
     ],
   },
