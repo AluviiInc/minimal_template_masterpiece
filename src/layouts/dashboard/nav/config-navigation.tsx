@@ -52,11 +52,11 @@ const navConfig = [
       // DASHBOARD
       {
         title: 'dashboard',
-        path: PATH_DASHBOARD.user.root,
+        path: PATH_DASHBOARD.main.root,
         icon: ICONS.house,
         children: [
-          { title: 'dashboard', path: PATH_DASHBOARD.user.profile },
-          { title: 'check-in', path: PATH_DASHBOARD.user.cards },
+          { title: 'dashboard', path: PATH_DASHBOARD.main.index },
+          { title: 'check-in', path: PATH_DASHBOARD.main.checkIn },
         ],
       },
 

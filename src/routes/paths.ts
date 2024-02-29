@@ -42,12 +42,17 @@ export const PATH_DASHBOARD = {
   permissionDenied: path(ROOTS_DASHBOARD, '/permission-denied'),
   blank: path(ROOTS_DASHBOARD, '/blank'),
   general: {
-    app: path(ROOTS_DASHBOARD, '/app'),
+    main: path(ROOTS_DASHBOARD, '/main'),
     ecommerce: path(ROOTS_DASHBOARD, '/ecommerce'),
     analytics: path(ROOTS_DASHBOARD, '/analytics'),
     banking: path(ROOTS_DASHBOARD, '/banking'),
     booking: path(ROOTS_DASHBOARD, '/booking'),
     file: path(ROOTS_DASHBOARD, '/file'),
+  },
+  main: {
+    root: path(ROOTS_DASHBOARD, '/main'),
+    index: path(ROOTS_DASHBOARD, '/main/index'),
+    checkIn: path(ROOTS_DASHBOARD, '/main/checkin'),
   },
   mail: {
     root: path(ROOTS_DASHBOARD, '/mail'),

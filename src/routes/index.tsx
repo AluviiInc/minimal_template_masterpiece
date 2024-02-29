@@ -126,6 +126,7 @@ import {
   DemoTextMaxLinePage,
   DemoUploadPage,
   DemoMarkdownPage,
+  Checkin
 } from './elements';
 
 // ----------------------------------------------------------------------
@@ -175,12 +176,20 @@ export default function Router() {
       ),
       children: [
         { element: <Navigate to={PATH_AFTER_LOGIN} replace />, index: true },
-        { path: 'app', element: <GeneralAppPage /> },
+        { path: 'main', element: <GeneralAppPage /> },
         { path: 'ecommerce', element: <GeneralEcommercePage /> },
         { path: 'analytics', element: <GeneralAnalyticsPage /> },
         { path: 'banking', element: <GeneralBankingPage /> },
         { path: 'booking', element: <GeneralBookingPage /> },
         { path: 'file', element: <GeneralFilePage /> },
+        {
+          path: 'main',
+          children: [
+            { element: <Navigate to="/dashboard/main/index" replace />, index: true },
+            { path: 'index', element: <GeneralAppPage /> },
+            { path: 'checkin', element: <Checkin /> }
+          ]
+        },
         {
           path: 'e-commerce',
           children: [
